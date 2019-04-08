@@ -234,3 +234,8 @@ def main(argv=sys.argv[1:]):
     )
 
     print('{0:03.1f}'.format(Tm))
+
+    if(len(edge_list) == 2):
+        G.add_node(edge_list[0].strip("() "))
+        G.add_node(edge_list[1].strip("() "))
+        G.add_edge(edge_list[0].strip("() "), edge_list[1].strip("() "), weight=float(jaccard[i]))
